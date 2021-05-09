@@ -14,8 +14,23 @@
 
 ## Screens
 
+ ### main Page
+ ![main page](./assets/images/main-page.png)
+
+ ### password length prompt
+ ![length prompt](./assets/images/password-length-prompt.png)
+
+ ### invalid length input alert
+ ![invalid length input alert](./assets/images/invalid-length-alert.png)
+
+ ### password character criteria prompt
+ ![password criteria prompt](./assets/images/password-Char-criteria-prompt.png)
+
+ ### invalid critera alert
+ ![invalid criteria input alert](./assets/images/invalid-criteria-alert.png)
+
 ## Thank you.
-## Created by: Sonali Pandey
+## Created by: [Sonali Pandey](github.com/sonali-pandey)
 
 
 

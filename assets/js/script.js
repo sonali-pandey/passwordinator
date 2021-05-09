@@ -1,8 +1,14 @@
-// Assignment code here
+
 var lowerChar = 'abcdefghijklmnopqrstuvwxyz';
 var upperChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var number = "0123456789";
 var special = "!@#$%^&*_-+=";
+var passwordChar = '';
+var passwordlength;
+var lowerCase;
+var upperCase;
+var numeric;
+var specialCase;
 
 function invalid(char){
   var flag = 0;
@@ -23,22 +29,19 @@ function invalid(char){
 
 var charSelector = function(){
 
-  var passwordChar = '';
-
-  var length = passwordLength();
-  var lowerCase = checkLowerCase();
-  var upperCase = checkUpperCase();
-  var numeric = checkNumeric();
-  var specialChar = checkSpecialChar();
+  passwordLength();
+  checkLowerCase();
+  checkUpperCase();
+  checkNumeric();
+  checkSpecialChar();
   
   // confirm the length of the password
   function passwordLength(){
-    var value = window.prompt("Please provide the number of characters for password. \n Minimum: 8 \n Maximum: 128");
-    if (!(value>=8 && value<= 128)){
+    length = window.prompt("Please provide the number of characters for password. \n Minimum: 8 \n Maximum: 128");
+    if (!(length>=8 && length<= 128)){
       window.alert("Please enter a valid number!");
       passwordLength();
     }
-    return value;
   }
 
 
@@ -57,7 +60,6 @@ var charSelector = function(){
   if (lowerCase === 'y'){
     passwordChar += lowerChar;
   }
-  return lowerCase;
 };
 
   // check if want to include upper case
@@ -76,8 +78,6 @@ var charSelector = function(){
     if (upperCase === 'y'){
       passwordChar += upperChar;
     }
-
-    return upperCase;
   };
 
  
@@ -97,8 +97,6 @@ var charSelector = function(){
     if(numeric === 'y' || numeric === 'Y'){
       passwordChar += number;
     }
-
-    return numeric;
   };
  
   // check if want to add special character
@@ -116,8 +114,6 @@ var charSelector = function(){
     if (specialChar === 'y'){
       passwordChar += special;
     }
-
-    return specialChar;
   };
 
   // alert if no characters were selected
