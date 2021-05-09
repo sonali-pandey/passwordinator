@@ -24,16 +24,12 @@ function invalid(char){
 var charSelector = function(){
 
   var passwordChar = '';
-  var lowerCase;
-  var upperCase;
-  var numeric;
-  var specialChar;
 
   var length = passwordLength();
-  checkLowerCase();
-  checkUpperCase();
-  checkNumeric();
-  checkSpecialChar();
+  var lowerCase = checkLowerCase();
+  var upperCase = checkUpperCase();
+  var numeric = checkNumeric();
+  var specialChar = checkSpecialChar();
   
   // confirm the length of the password
   function passwordLength(){
@@ -48,7 +44,7 @@ var charSelector = function(){
 
   // check if want to include lower case
   function checkLowerCase(){
-  var lowerCase = window.prompt("Do you want to include 'Lower case character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
+  lowerCase = window.prompt("Do you want to include 'Lower case character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
   // check for invalid inputs
   var flag = invalid(lowerCase);
 
@@ -61,11 +57,12 @@ var charSelector = function(){
   if (lowerCase === 'y'){
     passwordChar += lowerChar;
   }
+  return lowerCase;
 };
 
   // check if want to include upper case
   function checkUpperCase(){
-    var upperCase = window.prompt("Do you want to include 'Upper case character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
+    upperCase = window.prompt("Do you want to include 'Upper case character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
     
     // check for invalid inputs
     var flag = invalid(upperCase);
@@ -79,12 +76,15 @@ var charSelector = function(){
     if (upperCase === 'y'){
       passwordChar += upperChar;
     }
+
+    return upperCase;
   };
 
  
   // check if want to add numeric character
   function checkNumeric(){
-    var numeric = window.prompt("DO you want to add 'Numeric character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
+    numeric = window.prompt("DO you want to add 'Numeric character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
+    
     // check for invalid inputs
     var flag = invalid(numeric);
 
@@ -97,11 +97,13 @@ var charSelector = function(){
     if(numeric === 'y' || numeric === 'Y'){
       passwordChar += number;
     }
+
+    return numeric;
   };
  
   // check if want to add special character
   function checkSpecialChar(){
-    var specialChar = window.prompt("Do you want to add 'Special character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
+    specialChar = window.prompt("Do you want to add 'Special character' in the password? \n Choose: \n 'Y' for Yes \n 'N' for No");
     // check for invalid inputs
     var flag = invalid(specialChar);
 
@@ -114,6 +116,8 @@ var charSelector = function(){
     if (specialChar === 'y'){
       passwordChar += special;
     }
+
+    return specialChar;
   };
 
   // alert if no characters were selected
