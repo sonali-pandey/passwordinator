@@ -27,7 +27,7 @@
  ![password criteria prompt](./assets/images/password-Char-criteria-prompt.png)
 
  ### invalid critera alert
- ![invalid criteria input alert](./assets/images/invalid-criteria-alert.png)
+ ![invalid criteria input alert](./assets/images/Invalid-criteria-alert.png)
 
 ## Thank you.
 ## Created by: [Sonali Pandey](github.com/sonali-pandey)
