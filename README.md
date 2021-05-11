@@ -1,4 +1,4 @@
-# Passwordinator
+# [Passwordinator](https://sonali-pandey.github.io/passwordinator/)
 
 ## Generate the strongest password to keep your accounts super safe
 
